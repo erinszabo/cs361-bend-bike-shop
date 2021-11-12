@@ -2,12 +2,13 @@
 
 require_relative 'bike'
 
-bike = Bike.new(1, :pink, 99.99)
+bike = Bike.new(1, :pink, 9999)
 
 bike.add_cargo(:apples)
 bike.add_cargo(:water)
 bike.add_cargo(:repair_kit)
 
-puts "Space for #{bike.pannier_remaining_capacity} items left."
+
+puts "Space for #{bike.cargo_remaining_capacity} items left."
 
 bike.rent!
