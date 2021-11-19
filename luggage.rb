@@ -1,16 +1,17 @@
 class Luggage
 
-  DEFAULT_MAX_CAPACITY = 10
-
   attr_reader :items
 
-  def initialize(initial_capacity, items, bike)
-    @capacity = initial_capacity
+  DEFAULT_MAX_CAPACITY = 10
+
+  def initialize(items)
+    @capacity = DEFAULT_MAX_CAPACITY
     @items = items
-    @bike = bike
   end
 
   def add(item)
+    # should maybe check if below max capacity first, 
+    # but not relevant to the exercise 
     self.items << item
   end
 
